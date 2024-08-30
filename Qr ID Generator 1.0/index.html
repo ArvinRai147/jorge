@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Generator with QR Code</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student ID Generator</h1>
+        <form id="studentIdForm" action="generate_id.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="student_id" placeholder="Student ID" required>
+            <input type="text" name="course" placeholder="Course" required>
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Generate Student ID</button>
+        </form>
+        <div id="idCard" class="id-card" style="display: none;">
+            <h2>Student ID Card</h2>
+            <img id="cardImage" src="https://picsum.photos/seed/-bTZ3K4cg3LmjK1zjEYs7/512" alt="Profile Image" style="width:100px; height:auto;">
+            <p id="cardName"></p>
+            <p id="cardStudentId"></p>
+            <p id="cardCourse"></p>
+            <h3>QR Code</h3>
+            <img id="qrCode" src="https://picsum.photos/seed/VFi9XpUdZ7BRkBncElrPd/512" alt="QR Code" style="margin-top:10px; width:100px; height:auto;">
+        </div>
+    </div>
+<script src="index.js"></script>
+
+</body>
+</html>
