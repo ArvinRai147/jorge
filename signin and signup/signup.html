@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Creating Account</title>
+    <link rel="icon" type="image/x-icon" href="id_icon.png">
+	<link rel="stylesheet" href="signup_css.css">
+</head>
+<body>
+    <div class = "hmlg">
+        <img class = "studlg"src="homepage_logo.png" alt="Student QR Code ID Generator and Scanner - University of Rizal System">
+        <img class= "urslogo" src="urslg.png" alt="urs_logo_giants">
+    </div>
+	<div class="container">
+		<h1>University of</h1>
+		<h2>Rizal System</h2>
+		<form>
+            <p class = create_as>Creating Your Account As?</p>
+            <div class="rbtn">
+                <input value="value-1" name="value-radio" id="value-1" type="radio">
+                <label for="value-1">Admin</label>
+                <input value="value-2" name="value-radio" id="value-2" type="radio">
+                <label for="value-2">Guard</label>
+              </div>
+            <div class="input-group">
+                <input type="text" required>
+                <label for="">Username</label>
+            </div>
+            <div class="input-group">
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="input-group">
+                <input type="password" required>
+                <label for="">Re-enter Password</label>
+            </div>
+            <div class="btn">
+                <button onclick="cancelButton()"type="Cancel" value="Cancel" class ="cancel">
+                    <span class="s2">Cancel</span>
+                </button>
+                <script>
+                    function cancelButton() {
+                      if (confirm("Are you sure you want to cancel?")) {
+                        alert("Operation cancelled.");
+                        window.location.href = "signin.html"; // babalik sa sign in page
+                      } else {
+                        alert("Operation not cancelled.");
+                      }
+                    }
+                  </script>
+                  </script>
+                <button type="submit" value="Sign-up">
+                    <span>Submit</span>
+                </button>
+            </div>
+		</form>
+		<p>Do you have any account? <a href="signin.html">Click Here To Sign-in</a></p>
+	</div>
+</body>
+</html>
